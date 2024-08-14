@@ -12,7 +12,7 @@ This TypeScript library provides comprehensive tools for interacting with Binanc
 ## Installation
 
 ```bash
-  npm binance-ts-wrapper
+  npm i binance-ts-wrapper
 ```
 
 ## Setup
@@ -47,7 +47,7 @@ The library supports three types of API requests: public, keyed, and private. He
 ```javascript
 async function getTickerPrice() {
   const response = await spotClient.publicRequest({
-    method: RequestType.GET,
+    method: 'GET',
     path: '/api/v3/ticker/price',
     params: { symbol: 'BTCUSDT' }
   });
@@ -61,7 +61,7 @@ getTickerPrice();
 ```javascript
 async function getAccountStatus() {
   const response = await spotClient.keyedRequest({
-    method: RequestType.GET,
+    method: 'GET',
     path: '/api/v3/account'
   });
   console.log('Account Status:', response);
@@ -74,7 +74,7 @@ getAccountStatus();
 ```javascript
 async function getUserData() {
   const response = await spotClient.privateRequest({
-    method: RequestType.GET,
+    method: 'GET',
     path: '/api/v3/account'
   });
   console.log('User Account Data:', response);

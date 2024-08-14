@@ -1,6 +1,6 @@
 import WebSocket from "ws";
 
-import { BinanceApiOptions, ListenKeyResponse, RequestType, UserDataWebSocketConnectOptions, WebSocketConnectOptions } from "../types";
+import { BinanceApiOptions, ListenKeyResponse, UserDataWebSocketConnectOptions, WebSocketConnectOptions } from "../types";
 import { BinanceApiClient } from "./binanceApiClient";
 
 export abstract class BinanceUserDataStreamClient {
@@ -81,14 +81,14 @@ export abstract class BinanceUserDataStreamClient {
 
   private async createListenKey(): Promise<ListenKeyResponse> {
     return await this.apiClient.keyedRequest({
-      method: RequestType.POST,
+      method: "POST",
       path: this.getUserDataPath(),
     });
   }
 
   private async updateListenKey(): Promise<ListenKeyResponse> {
     return await this.apiClient.keyedRequest({
-      method: RequestType.PUT,
+      method: "PUT",
       path: this.getUserDataPath(),
       params: { listenKey: this.listenKey, },
     });

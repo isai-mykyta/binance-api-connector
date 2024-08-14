@@ -1,7 +1,7 @@
 import * as crypto from "crypto";
 import axios from "axios";
 
-import { BinanceApiOptions, HttpRequestOptions, RequestType } from "../types";
+import { BinanceApiOptions, HttpRequestOptions } from "../types";
 
 export abstract class BinanceApiClient {
   private readonly apiKey: string;
@@ -36,7 +36,7 @@ export abstract class BinanceApiClient {
   }
 
   private async signedRequest<P, D>(
-    method: RequestType,
+    method: "GET" | "POST" | "PATCH" | "DELETE" | "PUT",
     path: string,
     params?: P,
     data?: D,

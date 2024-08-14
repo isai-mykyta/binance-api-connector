@@ -1,11 +1,3 @@
-export enum RequestType {
-  GET = "GET",
-  POST = "POST",
-  PATH = "PATCH",
-  PUT = "PUT",
-  DELETE = "DELETE"
-}
-
 export interface BinanceApiOptions {
   apiKey: string;
   apiSecret: string;
@@ -13,7 +5,7 @@ export interface BinanceApiOptions {
 }
 
 export interface HttpRequestOptions<P, D = null> {
-  method: RequestType;
+  method: "GET" | "POST" | "PATCH" | "DELETE" | "PUT";
   path: string;
   params?: P;
   headers?: Record<string, unknown>;
