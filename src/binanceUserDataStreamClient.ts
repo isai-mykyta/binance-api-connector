@@ -1,6 +1,6 @@
 import WebSocket from "ws";
 
-import { BinanceApiOptions, ListenKeyResponse, UserDataWebSocketConnectOptions, WebSocketConnectOptions } from "../types";
+import { BinanceApiOptions, ListenKeyResponse, UserDataWebSocketConnectOptions, WebSocketConnectOptions } from "./types";
 import { BinanceApiClient } from "./binanceApiClient";
 
 export abstract class BinanceUserDataStreamClient {

@@ -1,6 +1,6 @@
 import WebSocket from "ws";
 
-import { MarketDataWebSocketConnectOptions, WebSocketConnectOptions } from "../types";
+import { MarketDataWebSocketConnectOptions, WebSocketConnectOptions } from "./types";
 
 export abstract class BinanceMarketDataStreamClient {
   private readonly apiUrl: string;

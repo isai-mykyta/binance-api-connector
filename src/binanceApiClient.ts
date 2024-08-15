@@ -1,7 +1,7 @@
 import * as crypto from "crypto";
 import axios from "axios";
 
-import { BinanceApiOptions, HttpRequestOptions } from "../types";
+import { BinanceApiOptions, HttpRequestOptions } from "./types";
 
 export abstract class BinanceApiClient {
   private readonly apiKey: string;
