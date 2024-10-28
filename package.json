@@ -1,6 +1,6 @@
 {
   "name": "binance-ts-wrapper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "JS library for working with Binance API with TS support",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

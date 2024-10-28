@@ -51,9 +51,9 @@ export abstract class BinanceApiClient {
       path,
       method,
       params: {
+        timestamp,
         ...params,
         signature,
-        timestamp,
       },
       headers: {
         "X-MBX-APIKEY": this.apiKey,
