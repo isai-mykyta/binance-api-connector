@@ -12,7 +12,7 @@ This TypeScript library provides comprehensive tools for interacting with Binanc
 ## Installation
 
 ```bash
-  npm i binance-ts-wrapper
+  npm i @mykyta-isai/binance-api-connector
 ```
 
 ## Setup
@@ -20,7 +20,7 @@ This TypeScript library provides comprehensive tools for interacting with Binanc
 To use the library, import and initialize the desired API client with your Binance API credentials:
 
 ```javascript
-import { BinanceSpotApiClient, BinanceUsdmFuturesApiClient, BinanceCoinmFuturesApiClient } from 'binance-ts-wrapper';
+import { BinanceSpotApiClient, BinanceUsdmFuturesApiClient, BinanceCoinmFuturesApiClient } from '@mykyta-isai/binance-api-connector';
 
 const spotClient = new BinanceSpotApiClient({
   apiKey: 'your-api-key',
@@ -90,7 +90,7 @@ These examples demonstrate the flexibility of the library in handling different 
 For real-time data streaming you can use BinanceUdmMarketDataStreamClient, BinanceCoinmMarketDataStreamClient or BinanceSpotMarketDataStreamClient:
 
 ```javascript
-import { BinanceSpotMarketDataStreamClient } from 'binance-ts-wrapper';
+import { BinanceSpotMarketDataStreamClient } from '@mykyta-isai/binance-api-connector';
 
 const marketStream = new BinanceSpotMarketDataStreamClient({
   onMessageCallback: (message) => console.log('New Message:', message),
@@ -115,7 +115,7 @@ For real-time data streaming, use the BinanceSpotUserDataStreamClient, BinanceUs
 Here's how to subscribe to user data streams and handle messages:
 
 ```javascript
-import { BinanceSpotUserDataStreamClient, WebSocketConnectOptions } from 'binance-ts-wrapper';
+import { BinanceSpotUserDataStreamClient, WebSocketConnectOptions } from '@mykyta-isai/binance-api-connector';
 
 const options: WebSocketConnectOptions = {
   apiKey: 'your-api-key',
