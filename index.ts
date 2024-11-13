@@ -1,7 +1,7 @@
-import { BinanceApiClient } from "./binanceApiClient";
-import { BinanceMarketDataStreamClient } from "./binanceMarketDataStreamClient";
-import { BinanceUserDataStreamClient } from "./binanceUserDataStreamClient";
-import { BinanceApiOptions, MarketDataWebSocketConnectOptions, WebSocketConnectOptions } from "./types";
+import { BinanceApiClient } from "./src/binanceApiClient";
+import { BinanceMarketDataStreamClient } from "./src/binanceMarketDataStreamClient";
+import { BinanceUserDataStreamClient } from "./src/binanceUserDataStreamClient";
+import { BinanceApiOptions, MarketDataWebSocketConnectOptions, WebSocketConnectOptions } from "./src/types";
 
 export class BinanceSpotApiClient extends BinanceApiClient {
   constructor (options: Omit<BinanceApiOptions, "apiUrl">) {
